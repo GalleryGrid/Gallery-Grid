@@ -8,15 +8,13 @@
     <link rel="stylesheet" href="./styles.css">
   </head>
 
-
   <body>
     <header>
-      Art Viewer
+      <h1>Art Viewer App</h1>
     </header>
 
-    <p id="error-message"></p>
-
     <main>
+<<<<<<< feature/dom-helpers-functions
 
     <section id="art-detail">
       <h2 id="product-title">Paintings</h2>
@@ -31,9 +29,44 @@
         </li>
       </ul>
 
+=======
+      <section id="search-section">
+        <h2>Search for Painting By Keyword</h2>
+
+        <form>
+          <label for="name">Painting Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Enter keyword..."
+          />
+          <button type="submit">Search for Paintings</button>
+        </form>
+
+        <p id="error-message"></p>
+      </section>
+
+      <section id="painting-details">
+        <h2 id="products-heading">Paintings</h2>
+
+        <ul id="products-list">
+          <li data-product-id="1">
+            <img
+              src="https://www.artic.edu/iiif/2/e966799b-97ee-1cc6-bd2f-a94b4b8bb8f9/full/225,150/0/default.jpg"
+              alt="Abstract painting composed of small vertical dabs of multiple shades of blue with a small area of red, orange, and yellow in the upper right."
+              id="product-thumbnail"
+            />
+            <button class="button-info">More Info</button>
+          </li>
+        </ul>
+      </section>
+
+        <button id="load-button">More Art</button>
+>>>>>>> main
     </main>
 
-    <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
