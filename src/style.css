@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f4f4;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* ===== HEADER ===== */
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #333;
+  color: white;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+#art-heading {
+    display: flex;
+    margin-left: 250px;
+}
+/* ===== SEARCH SECTION ===== */
+#search-section {
+  background: #fff;
+  padding: 2rem 1rem;
+  max-width: 700px;
+  margin: 2rem auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+#search-section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+#search-section input[type="text"] {
+  padding: 10px;
+  width: 60%;
+  max-width: 300px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+#search-section input[type="text"]:focus {
+  outline: none;
+  border-color: #333;
+}
+
+#search-section button {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  background: #333;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#search-section button:hover {
+  background: #555;
+}
+
+/* ===== ERROR MESSAGE ===== */
+#error-message {
+  margin-top: 10px;
+  color: crimson;
+  font-weight: 500;
+}
+
+/* ===== ART LIST ===== */
+#art-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 1rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+#art-list li {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#art-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* === IMAGE === */
+#art-list img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  transition: transform 0.4s;
+}
+
+#art-list li:hover img {
+  transform: scale(1.05);
+}
+
+/* === BUTTONS === */
+.button-info {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.button-info:hover {
+  background: #555;
+}
+
+/* === MORE ART BUTTON === */
+#load-button {
+  display: block;
+  margin: 2rem auto;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#load-button:hover {
+  background: #555;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  #search-section input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #search-section button {
+    width: 100%;
+  }
+}
+
