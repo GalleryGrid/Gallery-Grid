@@ -16,14 +16,14 @@ export const fetchData = async (url) => {
     }
 }
 // function to get the entire collection
-export const getArt = () => {
-    return fetchData('https://api.artic.edu/api/v1/artworks?fields=id,title,image_id,description,&limit=100')
+export const getArt = (page) => {
+    return fetchData(`https://api.artic.edu/api/v1/artworks?fields=id,title,image_id,description&page=${page}&limit=12`)
 }
 // function to get artworks by its ID
 export const getArtById = (id) => {
-    return fetchData(`https://api.artic.edu/api/v1/artworks/${id}`)
+    return fetchData(`https://api.artic.edu/api/v1/artworks/${id}?fields=id,title,image_id,description,artist_display,date_display`)
 }
 // search for a product
 export const searchArt = (query) => {
-
+  return fetchData(`https://api.artic.edu/api/v1/artworks/search?q=${encodeURIComponent(query)}&fields=id,title,image_id,description,artist_display,date_display`);
 }
