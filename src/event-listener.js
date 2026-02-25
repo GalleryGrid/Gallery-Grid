@@ -1,4 +1,4 @@
-import { getArt, getArtById } from './fetch-helpers.js';
+import { getArt, getArtById, searchArt } from './fetch-helpers.js';
 import { renderArt, renderArtDetails } from './dom-helpers.js';
 
 const loadButton = document.querySelector('#load-button');
@@ -27,7 +27,7 @@ artList.addEventListener('click', (event) => {
       if (res.error) {
         errorMessage.textContent = res.error.message;
       } else {
-        console.log(res.data.data)
+        console.log(res.data.data);
         renderArtDetails(res.data.data);
       }
     });
@@ -38,4 +38,23 @@ artDetail.addEventListener('click', (event) => {
   if (event.target.matches('#close-button')) {
     artDetail.classList.add('hidden');
   }
+});
+
+const form = document.querySelector('form');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const query = document.querySelector('#name').value.trim();
+  if (!query) return;
+
+  artList.innerHTML = '';
+  errorMessage.textContent = '';
+
+  searchArt(query).then((res) => {
+    if (res.error) {
+      errorMessage.textContent = res.error.message;
+    } else {
+      renderArt(res.data.data);
+    }
+  });
 });
