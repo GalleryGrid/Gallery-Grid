@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/Gallery-Grid/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gallerygrid</title>
+    <script type="module" crossorigin src="/Gallery-Grid/assets/index-wSrt9i2y.js"></script>
+    <link rel="stylesheet" crossorigin href="/Gallery-Grid/assets/index-xPcJBx5C.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Gallery Grid</h1>
+    </header>
+
+    <main>
+      <section id="search-section">
+        <h2>Search for Painting By Keyword</h2>
+
+        <form>
+          <label for="name">Painting Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Enter keyword..."
+          />
+          <button type="submit">Search for Paintings</button>
+        </form>
+
+        <p id="error-message"></p>
+      </section>
+
+      <section id="painting-details">
+        <h2 id="art-heading">Paintings</h2>
+
+        <ul id="art-list">
+          <li data-product-id="1">
+            <img
+              src="https://www.artic.edu/iiif/2/e966799b-97ee-1cc6-bd2f-a94b4b8bb8f9/full/225,150/0/default.jpg"
+              alt="Abstract painting composed of small vertical dabs of multiple shades of blue with a small area of red, orange, and yellow in the upper right."
+              id="product-thumbnail"
+            />
+            <button class="button-info">More Info</button>
+          </li>
+        </ul>
+      </section>
+      <section id="art-detail" class="hidden">
+      </section>
+
+        <button id="load-button">More Art</button>
+    </main>
+
+  </body>
+</html>
